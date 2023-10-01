@@ -26,7 +26,9 @@ class Example extends React.Component {
       counter: 0,
       inputValue: '',
       buttonWasClicked: '',
+        motto: window.models.exampleModel().motto,
     };
+
 
     // React events are called directly from DOM event handlers
     // so we cannot directly call the methods of this class. We
@@ -97,14 +99,21 @@ class Example extends React.Component {
     return retVal;
   }
 
-  render() {
-    return (
-      <div className="container Example">
-        <h1>Project 4 React.js Example</h1>
+    render() {
+        return (
+            <div className="container Example">
+                <h1>Project 4 React.js Example</h1>
 
-        <div className="motto-update">
-          {/* Your problem #1 motto displaying and updating widget goes here */}
-        </div>
+                <div className="motto-update">
+                    <div><b>
+                        {this.state.name}
+                    </b></div>
+                    <div>
+                        <input className="motto-input" type="text"
+                               value={this.state.motto}
+                               onChange={(event) => {this.handleMottoChange(event)}} />
+                    </div>
+                </div>
 
         <p>
           This view is an example of a
@@ -169,10 +178,10 @@ class Example extends React.Component {
           </code>
         </pre>
         <p>
-          should render as:
+          should render as :
         </p>
         <p className="example-output">
-          My name is &ldquo; {this.state.name} &rdquo;.
+          My name is &ldquo; {this.state.motto} &rdquo;.
         </p>
 
         <h3>
@@ -402,6 +411,12 @@ class Example extends React.Component {
       </div>
     );
   }
+
+
+
+    handleMottoChange(event) {
+        this.setState({ motto: event.target.value });
+    }
 }
 
 export default Example;

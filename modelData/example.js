@@ -16,6 +16,13 @@ if (models === undefined) {
 
 models.exampleModel = function () {
   return {
-    name: "Unknown Name",
+    name: "Bug Busters",
+    motto: "Forgot to build for 2hrs!"
   };
 };
+//Hmm
+
+
+
+
+
