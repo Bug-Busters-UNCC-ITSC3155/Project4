@@ -1,0 +1,47 @@
+/*
+CSS for the Project 4, Problem 2 States component
+
+Since CSS uses a global name space for classes we should use names starting with
+states- here.
+*/
+
+.states-view {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px 0px #ccc;
+}
+
+.states-view input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.displayed-substring {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.states-view ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.states-view li {
+    padding: 8px;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.states-view li:last-child {
+    border-bottom: none;
+}
+
+/* Styles when no states match */
+.states-view div {
+    color: #ff0000;
+}
+
