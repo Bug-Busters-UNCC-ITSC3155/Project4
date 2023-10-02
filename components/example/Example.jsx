@@ -181,7 +181,7 @@ class Example extends React.Component {
           should render as :
         </p>
         <p className="example-output">
-          My name is &ldquo; {this.state.motto} &rdquo;.
+          My name is &ldquo; {this.state.name} &rdquo;.
         </p>
 
         <h3>
