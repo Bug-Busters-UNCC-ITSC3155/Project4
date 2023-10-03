@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 
-class Header extends Componenet{
+class Header extends React.Component{
     render(){
         return (
             <section>
@@ -12,4 +12,4 @@ class Header extends Componenet{
 
     }
 }
-export default header;
+export default Header;
