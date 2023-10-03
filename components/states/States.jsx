@@ -13,8 +13,8 @@ class States extends React.Component {
 
     this.state = {
       substring: '',
-      states: models.states(),
-    }
+      states: window.models.states(),
+    };
     console.log('window.models.states', window.models.states);
   }
 
@@ -53,7 +53,7 @@ class States extends React.Component {
                 {filteredStates.map((state, index) => <li key={index}>{state} </li>)}
               </ul>
           ) : (
-              <div>No states match the substring "{substring}"</div>
+              <div>No states match the substring &quot;{substring}&quot;</div>
           )}
         </div>
     );
